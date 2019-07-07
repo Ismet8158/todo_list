@@ -33,10 +33,12 @@ export default {
       },
       clearAll(){
         this.tasks = [];
-      }
+      },
   },
   mounted: function(){
       this.tasks = localStorage.getItem("tasks")? JSON.parse(localStorage.getItem("tasks")) : []; //извлекаем массив из хранилища
+      let id = 0;
+      this.tasks.map(item => item.id = id++);
   },
   updated: function(){
     localStorage.setItem("tasks", JSON.stringify(this.tasks));//записываем массива в хранилище
