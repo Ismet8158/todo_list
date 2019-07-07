@@ -5,9 +5,9 @@
         <h2>Список задач</h2>
         <img src="../assets/clipboard.png" width="30" height="30" alt="clipboard">
       </div>
-      <input  type="text" v-model="task.text" placeholder="Введите текст" :class="{ errClass: errMsgText }">
+      <input  type="text" v-model="task.text" placeholder="Задача" :class="{ errClass: errMsgText }">
       <span>{{errMsgText}}</span>
-      <input  type="text" v-model="task.time" placeholder="Введите время (**:**)" :class="{ errClass: errMsgTime }">
+      <input  type="text" v-model="task.time" placeholder="Время чч:мм" :class="{ errClass: errMsgTime }">
       <span>{{errMsgTime}}</span>
       <button @click="addTask">Добавить</button>
     </div>
